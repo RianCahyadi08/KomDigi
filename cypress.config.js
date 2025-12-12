@@ -20,6 +20,8 @@ module.exports = defineConfig({
       const envName = config.env.configFile || "dev";
       return Object.assign({}, config, JSON.parse(getConfigFile(envName)));
     },
-    baseUrl: "https://www.saucedemo.com/",
+  },
+  env: {
+    stage: "https://staging-servicedesk.layanan.go.id/user/sign-in",
   },
 });

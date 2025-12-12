@@ -7,6 +7,8 @@ class SubCategoryPage {
     btnKirim:
       'button[class*="btn btn-sm btn-primary border border-primary px-10"]',
     btnPencil: 'button[class*="btn btn-sm btn-icon btn-warning"]',
+    btnTrash: 'button[class*="btn btn-sm btn-icon btn-danger"]',
+    btnYa: 'button[class*="swal2-confirm swal2-styled swal2-default-outline"]',
   };
 
   accessSubCategoryPage() {
@@ -35,6 +37,11 @@ class SubCategoryPage {
   updateSubCategory() {
     cy.get(this.elements.btnPencil).eq(0).click();
     cy.get(this.elements.btnKirim).eq(3).click();
+  }
+
+  deleteSubCategory() {
+    cy.get(this.elements.btnTrash).eq(0).click();
+    cy.get(this.elements.btnYa).click();
   }
 }
 

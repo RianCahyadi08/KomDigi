@@ -1,0 +1,16 @@
+{
+  "name": "cypress-template-professional",
+  "version": "1.0.0",
+  "devDependencies": {
+    "cypress": "^15.7.1",
+    "mochawesome": "^7.1.4",
+    "mochawesome-merge": "^5.1.0",
+    "mochawesome-report-generator": "^6.3.2"
+  },
+  "scripts": {
+    "test": "cypress open",
+    "test:headless": "cypress run",
+    "test:dev": "cypress run --env configFile=dev",
+    "test:staging": "cypress run --env configFile=staging"
+  }
+}

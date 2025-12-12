@@ -6,6 +6,7 @@ class SubCategoryPage {
     fieldDescription: 'textarea[placeholder*="Masukan Deskripsi"]',
     btnKirim:
       'button[class*="btn btn-sm btn-primary border border-primary px-10"]',
+    btnPencil: 'button[class*="btn btn-sm btn-icon btn-warning"]',
   };
 
   accessSubCategoryPage() {
@@ -29,6 +30,11 @@ class SubCategoryPage {
       .type(description)
       .should("have.value", description);
     cy.get(this.elements.btnKirim).eq(2).click();
+  }
+
+  updateSubCategory() {
+    cy.get(this.elements.btnPencil).eq(0).click();
+    cy.get(this.elements.btnKirim).eq(3).click();
   }
 }
 

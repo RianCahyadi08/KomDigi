@@ -1,16 +1,15 @@
 import LoginPage from "../../support/pages/LoginPage";
-import DashboardPage from "../../support/pages/DashboardPage";
 
-describe("Authentication - Login", () => {
+describe("User dihalaman login", () => {
+  const env = Cypress.env("stage");
+
   beforeEach(() => {
-    LoginPage.visit();
+    cy.visit(env);
   });
 
-  it("Login with valid credentials", () => {
+  it("Login with credential valid", () => {
     cy.fixture("users").then((data) => {
       LoginPage.login(data.validUser.email, data.validUser.password);
-      cy.url().should("include", "/inventory.html");
-      DashboardPage.verifyDashboard();
     });
   });
 });

@@ -1,7 +1,7 @@
 {
   "validUser": {
-    "email": "standard_user",
-    "password": "secret_sauce"
+    "email": "juli016@komdigi.go.id",
+    "password": "Admin123!()"
   },
   "invalidUser": {
     "email": "admin@mail.com",

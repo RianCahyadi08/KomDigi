@@ -18,3 +18,4 @@ import "./commands";
 import "./commands/auth";
 import "./commands/api";
 import "./custom-assertions/assertions";
+import "cypress-real-events/support";
